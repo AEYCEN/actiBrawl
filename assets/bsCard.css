@@ -1,0 +1,29 @@
+.RectangleButton {
+    font-size: 18px;
+    line-height: 28px;
+    position: relative;
+    display: inline-block;
+    min-height: 20px;
+    margin-bottom: 2px;
+    user-select: none;
+    transform: skewX(355deg);
+    pointer-events: all;
+    border: 2px solid #040404;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: 0 2px #040404;
+}
+
+.RectangleButton__background {
+    min-width: 200px;
+    padding: 5px 80px 15px;
+    border-top: 4px solid #4b546c;
+    border-bottom: 4px solid #222b3f;
+    border-radius: 2px;
+    background-color: #343c52;
+    box-shadow: 1px 1px #000, -1px -1px #000;
+}
+
+.RectangleButton__label {
+    font-size: 18px;
+}

@@ -13,41 +13,41 @@
     --font-size: 16px;
     /* 👆 this field should not be empty */
     --font-weight: 600;
-    --font-family: Menlo,Roboto Mono,monospace;
+    --font-family: Menlo, Roboto Mono, monospace;
     /* 👆 this field should not be empty */
 }
 
 /* button settings 👆 */
 
 .ui-btn {
-    box-sizing: border-box;
-    padding: var(--btn-padding);
-    align-items: center;
-    border-radius: 8px;
-    margin-top: 30px;
-    justify-content: center;
-    color: var(--default-btn-color);
     font: var(--font-weight) var(--font-size) var(--font-family);
-    background: var(--btn-default-bg);
-    border: none;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 150px;
+    margin-top: 30px;
+    padding: var(--btn-padding);
     cursor: pointer;
     transition: var(--btn-transition);
-    overflow: hidden;
+    color: var(--default-btn-color);
+    border: none;
+    border-radius: 2px;
+    background: var(--btn-default-bg);
     box-shadow: var(--btn-shadow);
-    width: 150px;
 }
 
 .ui-btn span {
-    letter-spacing: var(--btn-letter-spacing);
-    transition: var(--btn-transition);
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
+    transition: var(--btn-transition);
+    letter-spacing: var(--btn-letter-spacing);
     background: inherit;
 }
 
 .ui-btn span::before {
-    box-sizing: border-box;
     position: absolute;
+    box-sizing: border-box;
     content: "";
     background: inherit;
 }
@@ -56,10 +56,10 @@
     background: var(--btn-hover-bg);
 }
 
-.ui-btn:active{
-    box-shadow: none;
+.ui-btn:active {
     transition: 0.05s;
     background: var(--btn-active-bg);
+    box-shadow: none;
 }
 
 .ui-btn:hover span, .ui-btn:focus span {
