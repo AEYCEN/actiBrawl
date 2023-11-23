@@ -10,6 +10,9 @@ let text_submitButton;
 let trans;
 
 document.addEventListener("DOMContentLoaded", function () {
+    const versionElement = document.querySelector('#app-version');
+    versionElement.textContent = app_version;
+
     text_title = document.querySelector('#title');
     text_description = document.querySelector('#description');
     text_input1label = document.querySelector('#input1label');
@@ -28,32 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 function setTranslations(language) {
-    switch (language) {
-        case 'de_DE':
-            trans = de_DE;
-            break;
-        case 'en_GB':
-            trans = en_GB;
-            break;
-        case 'es_ES':
-            trans = es_ES;
-            break;
-        case 'fr_FR':
-            trans = fr_FR;
-            break;
-        case 'pl_PL':
-            trans = pl_PL;
-            break;
-        case 'it_IT':
-            trans = it_IT;
-            break;
-        case 'el_GR':
-            trans = el_GR;
-            break;
-        default:
-            console.warn('Unknown language ID: ' + language);
-            return;
+    if (languageMap.has(language)) {
+        trans = languageMap.get(language);
+    } else {
+        console.warn('Unknown language ID: ' + language);
+        trans = en_GB;
     }
+
+    localStorage.setItem("language", language);
 
     text_title.textContent = trans[0].title;
     text_description.textContent = trans[0].description;

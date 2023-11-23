@@ -12,8 +12,8 @@
     --default-btn-color: #fff;
     --font-size: 16px;
     /* 👆 this field should not be empty */
-    --font-weight: 600;
-    --font-family: Menlo, Roboto Mono, monospace;
+    --font-weight: 400;
+    --font-family: lilita one, monospace;
     /* 👆 this field should not be empty */
 }
 
@@ -29,12 +29,16 @@
     margin-top: 30px;
     padding: var(--btn-padding);
     cursor: pointer;
-    transition: var(--btn-transition);
     color: var(--default-btn-color);
-    border: none;
-    border-radius: 2px;
     background: var(--btn-default-bg);
     box-shadow: var(--btn-shadow);
+
+    transition: transform 0.4s ease;
+    transform: skew(-5deg);
+    text-align: center;
+    border: 2px solid #040404;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .ui-btn span {

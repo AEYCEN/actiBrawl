@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         inputAvgMember.value = 24;
     }
 
-    console.info('ActiBrawl © 2023 by AEYCEN | v0.3-alpha (22.11.23)')
+    console.info('ActiBrawl © 2023 by AEYCEN | ' + app_version)
 })
 
 function calculate() {
