@@ -12,42 +12,46 @@
     --default-btn-color: #fff;
     --font-size: 16px;
     /* 👆 this field should not be empty */
-    --font-weight: 600;
-    --font-family: Menlo,Roboto Mono,monospace;
+    --font-weight: 400;
+    --font-family: lilita one, monospace;
     /* 👆 this field should not be empty */
 }
 
 /* button settings 👆 */
 
 .ui-btn {
-    box-sizing: border-box;
-    padding: var(--btn-padding);
-    align-items: center;
-    border-radius: 8px;
-    margin-top: 30px;
-    justify-content: center;
-    color: var(--default-btn-color);
     font: var(--font-weight) var(--font-size) var(--font-family);
-    background: var(--btn-default-bg);
-    border: none;
-    cursor: pointer;
-    transition: var(--btn-transition);
     overflow: hidden;
-    box-shadow: var(--btn-shadow);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     width: 150px;
+    margin-top: 30px;
+    padding: var(--btn-padding);
+    cursor: pointer;
+    color: var(--default-btn-color);
+    background: var(--btn-default-bg);
+    box-shadow: var(--btn-shadow);
+
+    transition: transform 0.4s ease;
+    transform: skew(-5deg);
+    text-align: center;
+    border: 2px solid #040404;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .ui-btn span {
-    letter-spacing: var(--btn-letter-spacing);
-    transition: var(--btn-transition);
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
+    transition: var(--btn-transition);
+    letter-spacing: var(--btn-letter-spacing);
     background: inherit;
 }
 
 .ui-btn span::before {
-    box-sizing: border-box;
     position: absolute;
+    box-sizing: border-box;
     content: "";
     background: inherit;
 }
@@ -56,10 +60,10 @@
     background: var(--btn-hover-bg);
 }
 
-.ui-btn:active{
-    box-shadow: none;
+.ui-btn:active {
     transition: 0.05s;
     background: var(--btn-active-bg);
+    box-shadow: none;
 }
 
 .ui-btn:hover span, .ui-btn:focus span {
