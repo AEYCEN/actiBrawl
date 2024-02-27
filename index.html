@@ -14,61 +14,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
-<script>const app_version = 'v0.3-alpha.pre2 (23.11.23)'</script>
+<script>const app_version = 'v0.4-alpha (22.02.24)';</script>
 <div class="general-container">
     <div class="language-container">
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('en_GB')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="en_GB">
                 <img src="assets/img/flags/en_GB.png" alt="EN">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('de_DE')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="de_DE">
                 <img src="assets/img/flags/de_DE.png" alt="DE">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('es_ES')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="es_ES">
                 <img src="assets/img/flags/es_ES.png" alt="ES">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('fr_FR')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="fr_FR">
                 <img src="assets/img/flags/fr_FR.png" alt="FR">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('it_IT')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="it_IT">
                 <img src="assets/img/flags/it_IT.png" alt="IT">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('pl_PL')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="pl_PL">
                 <img src="assets/img/flags/pl_PL.png" alt="PL">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('el_GR')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="el_GR">
                 <img src="assets/img/flags/el_GR.png" alt="EL">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('pt_PT')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="pt_PT">
                 <img src="assets/img/flags/pt_PT.png" alt="PT">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('ru_RU')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="ru_RU">
                 <img src="assets/img/flags/ru_RU.png" alt="RU">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('ja_JP')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="ja_JP">
                 <img src="assets/img/flags/ja_JP.png" alt="JA">
             </div>
         </div>
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('ko_KR')">
-            <div class="RectangleButton__background2">
+            <div class="RectangleButton__background2 languageSelector" data-language="ko_KR">
                 <img src="assets/img/flags/ko_KR.png" alt="KO">
             </div>
         </div>
@@ -77,7 +77,7 @@
         <p id="h1">ActiBrawl</p>
         <p id="title">&nbsp;</p>
         <p class="text-block" id="description">&nbsp;</p>
-        <p id="creditAndVersion">© 2023 by <a href="https://github.com/AEYCEN" target="_blank">AEYCEN</a> | <span id="app-version"></span></p>
+        <p id="creditAndVersion">© 2023-<span id="copyrightYear"></span> by <a href="https://github.com/AEYCEN" target="_blank">AEYCEN</a> | <span id="app-version"></span></p>
         <br>
         <div class="RectangleButton RectangleButton--dark">
             <div class="RectangleButton__background">
@@ -91,7 +91,9 @@
                                 <span id="avgMembersValue">&nbsp;</span>
                             </label>
                         </div>
-                        <label class="input-label" for="input-wins" id="input2label">&nbsp;</label><br>
+                        <label class="input-label" for="input-tickets" id="input2label">&nbsp;</label><br>
+                        <input id="input-tickets" placeholder="" type="number"/>
+                        <label class="input-label" for="input-wins" id="input3label">&nbsp;</label><br>
                         <input id="input-wins" placeholder="" type="number"/>
                     </div>
                 </div>

@@ -40,6 +40,10 @@ br {
     color: #ffb119;
 }
 
+.language-container {
+    margin-top: 20px;
+}
+
 #title {
     font-size: 27px;
     margin-bottom: 30px;
@@ -210,4 +214,8 @@ input {
 
 #submitButtonText {
     text-transform: uppercase;
+}
+
+.languageSelector img {
+    vertical-align: text-top;
 }

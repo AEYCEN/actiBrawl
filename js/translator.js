@@ -6,6 +6,7 @@ let text_input1label;
 let text_input2label;
 let text_input2placeholder;
 let text_submitButton;
+let languageSelectors;
 
 let trans;
 
@@ -19,10 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     text_input2label = document.querySelector('#input2label');
     text_input2placeholder = document.querySelector('#input-wins');
     text_submitButton = document.querySelector('#submitButtonText');
+    languageSelectors = document.querySelectorAll('.languageSelector');
 
     let selected_language;
     if (saved_language) {
         selected_language = saved_language;
+
+        languageSelectors.forEach(function(element) {
+            if (element.getAttribute('data-language') === selected_language) {
+                element.classList.add('languageSelected');
+            }
+        });
     } else {
         selected_language = 'en_GB';
     }
@@ -37,6 +45,14 @@ function setTranslations(language) {
         console.warn('Unknown language ID: ' + language);
         trans = en_GB;
     }
+
+    languageSelectors.forEach(function(element) {
+        if (element.getAttribute('data-language') === language) {
+            element.classList.add('languageSelected');
+        } else {
+            element.classList.remove('languageSelected');
+        }
+    });
 
     localStorage.setItem("language", language);
 

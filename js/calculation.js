@@ -11,9 +11,10 @@ let outputDiv2;
 let outputDiv3;
 let outputDiv4;
 let outputDiv5;
+let copyrightYear;
 
-const MIN_TICKET_WINS_FOR_FULL = 250;
-const USABLE_TICKETS = 18;
+const MIN_TICKET_WINS_FOR_FULL = 200;
+const USABLE_TICKETS = 15;
 
 document.addEventListener("DOMContentLoaded", function () {
     inputAvgMember = document.querySelector('#input-avgMembers');
@@ -27,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     outputDiv3 = document.querySelector('.output-3');
     outputDiv4 = document.querySelector('.output-4');
     outputDiv5 = document.querySelector('.output-5');
+
+    copyrightYear = document.querySelector('#copyrightYear');
+
+    const now = new Date();
+    const yearNow =  now.getFullYear();
+    copyrightYear.innerText = yearNow;
 
     const avgMembersValue = document.getElementById('avgMembersValue');
     inputAvgMember.addEventListener("input", function () {
@@ -43,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         inputAvgMember.value = 24;
     }
 
-    console.info('ActiBrawl © 2023 by AEYCEN | ' + app_version)
+    console.info('ActiBrawl © 2023-' + yearNow + ' by AEYCEN | ' + app_version)
 })
 
 function calculate() {
