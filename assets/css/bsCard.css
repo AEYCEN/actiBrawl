@@ -70,5 +70,7 @@
 }
 
 .languageSelected {
-    background-color: #656567;
+    background-color: #282828;
+    border-top-color: #323232;
+    border-bottom-color: #1e1e1e;
 }

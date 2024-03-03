@@ -1,13 +1,15 @@
 const de_DE = [{
     title: 'Brawl Stars MegaPig Aktivitäts-Rechner',
-    description: 'Dieser Rechner ermittelt den empfohlenen Mindestbedarf an Tickets, die für die nächste MegaPig-Veranstaltung verwendet werden sollen, basierend auf den Ergebnissen des letzten Events. Bei der Berechnung wird davon ausgegangen, dass jeder Spieler alle Tickets genutzt hat, da dies theoretisch möglich gewesen wäre.',
+    description: 'Mit diesem Tool kannst du die an deine Clubmitglieder zu stellenden Mindestanforderungen an zu erzielenden Siegen oder einzusetzenden Tickets für das nächste MegaPig-Event ermitteln. Die Berechnung dessen basiert auf den erzielten Ergebnissen des letzten Events.',
     input1label: 'Durchschnittliche Mitgliederzahl',
     input2label: 'Anzahl der erzielten Siege',
     input2placeholder: 'Summe der Siege ...',
     submitButton: 'Berechnen',
 
-    output1label: 'Empfohlene Mindestticketanforderung',
-    output1valueUnit: ' Tickets',
+    output1label: 'Empfohlene Mindestanforderung',
+    output1valueUnit: ' Siege erzielen',
+    output1valueSeparator: ' oder ',
+    output1value2Unit: ' Tickets nutzen',
     output2label: 'Durchschnittliche Winrate',
     output2valueUnit: ' Siege',
     output3label: 'Durchschnittlicher Sieges-Prozentsatz',
@@ -26,14 +28,16 @@ const de_DE = [{
 
 const en_GB = [{
     title: 'Brawl Stars MegaPig activity calculator',
-    description: 'This calculator determines the recommended minimum requirement of tickets to be used for the next MegaPig event based on the results of the last event. The calculation assumes that each player has used all tickets, as this would have been theoretically possible.',
+    description: 'With this tool you can determine the minimum requirements for your club members in terms of wins to achieve or tickets to use for the next MegaPig event. The calculation of this is based on the results achieved from the last event.',
     input1label: 'Average number of members',
     input2label: 'Number of achieved wins',
     input2placeholder: 'Enter cumulative wins...',
     submitButton: 'Calculate',
 
-    output1label: 'Recommended minimum ticket requirement',
-    output1valueUnit: ' Tickets',
+    output1label: 'Recommended minimum requirement',
+    output1valueUnit: ' achieved wins',
+    output1valueSeparator: ' or ',
+    output1value2Unit: ' used tickets',
     output2label: 'Average win rate',
     output2valueUnit: ' Wins',
     output3label: 'Average percentage of wins',

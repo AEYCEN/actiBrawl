@@ -46,7 +46,7 @@
     user-select: none;
 }
 
-.card b {
+.card b, .card span {
     font-size: 30px;
 }
 
@@ -54,6 +54,10 @@
     margin-bottom: 20px;
     transition: transform 0.4s ease;
     color: #ffb119;
+}
+
+.card span {
+    color: #a8a8a8;
 }
 
 .card:hover {
@@ -67,6 +71,12 @@
 
 .card:hover .card-image b {
     transform: scale(5);
+}
+
+.wideCard {
+    max-width: unset;
+    flex-basis: unset;
+    padding: 15px 40px;
 }
 
 /*.card:active {*/

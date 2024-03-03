@@ -71,9 +71,10 @@ function calculate() {
         const freeTickets = (percentageDiff / 100) * USABLE_TICKETS;
 
         let ticketRequirement = Math.round(USABLE_TICKETS - (freeTickets));
+        let winRequirement = Math.round(USABLE_TICKETS - (freeTickets));
 
         let outputs = [
-            {label: trans[0].output1label, value: ticketRequirement + trans[0].output1valueUnit, type: 'info'},
+            {label: trans[0].output1label, value: ticketRequirement + trans[0].output1valueUnit, value2: winRequirement + trans [0].output1value2Unit, type: 'info'},
             {label: trans[0].output2label, value: winRate + trans[0].output2valueUnit, type: 'info'},
             {label: trans[0].output3label, value: Math.round(percentageOfWins) + trans[0].output3valueUnit, type: 'info'},
             {label: trans[0].output4label, value: Math.round(minPercentageOfWinsForFull) + trans[0].output4valueUnit, type: 'info'},
@@ -81,11 +82,11 @@ function calculate() {
         ];
 
         if (ticketRequirement > 18) {
-            outputs = [{label: trans[0].outputError1Label, value: trans[0].outputErrorValue, type: 'error'}];
+            outputs = [{label: trans[0].outputError1Label, value: trans[0].outputErrorValue, value2: '', type: 'error'}];
         }
 
         if (wins > maxTicketWins) {
-            outputs = [{label: trans[0].outputError2Label, value: trans[0].outputErrorValue, type: 'error'}];
+            outputs = [{label: trans[0].outputError2Label, value: trans[0].outputErrorValue, value2: '', type: 'error'}];
         }
 
         localStorage.setItem("avgMember", inputAvgMember.value);
@@ -108,11 +109,18 @@ function createOutput(outputs) {
         const outputDiv = document.querySelector(`.output-${i + 1}`);
         const outputLabel = outputDiv.querySelector(`.output-${i + 1}-label`);
         const outputValue = outputDiv.querySelector(`.output-${i + 1}-value`);
+        const outputValue2 = outputDiv.querySelector(`.output-${i + 1}-value2`);
+        const outputValueSeparator = outputDiv.querySelector(`.output-${i + 1}-valueSeparator`);
 
         if (outputs[i].label !== '') {
             outputDiv.style.display = 'flex';
             outputLabel.textContent = outputs[i].label;
             outputValue.textContent = outputs[i].value;
+
+            if (outputs[i].value2) {
+                outputValueSeparator.textContent = trans[0].output1valueSeparator;
+                outputValue2.textContent = outputs[i].value2;
+            }
 
             switch (outputs[i].type) {
                 case 'error':

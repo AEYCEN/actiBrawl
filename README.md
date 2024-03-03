@@ -1,5 +1,5 @@
 # ActiBrawl
-`© 2023-2024 by AEYCEN | v0.4-alpha (22.02.24)`
+`© 2023-2024 by AEYCEN | v0.4-alpha (03.03.24)`
 
 
 ### ❔ Description
@@ -11,6 +11,7 @@ all tickets, as this would have been theoretically possible.
 ### 📑 Changelog
 
     v0.4-alpha - updated calculation to latest ingame changes
+               - styling improvements
 
     v0.3-alpha - added translation support for 11 languages 
                - adapted UI design to official Brawl Stars design

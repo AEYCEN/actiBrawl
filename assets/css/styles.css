@@ -74,9 +74,9 @@ br {
 
 #outputContainer {
     align-items: center;
-    flex-direction: row;
+    /*flex-direction: row;*/
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     transition: all 0.3s;
     animation: slideIn .5s ease-out;
 }
@@ -218,4 +218,26 @@ input {
 
 .languageSelector img {
     vertical-align: text-top;
+}
+
+.languageSelector {
+    transition: all 0.1s ease;
+}
+
+.languageSelector:hover {
+    scale: 1.07;
+}
+
+.languageSelector:active {
+    scale: 0.95;
+}
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: all 0.3s;
+    animation: slideIn .5s ease-out;
 }

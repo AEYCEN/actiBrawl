@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
-<script>const app_version = 'v0.4-alpha (22.02.24)';</script>
+<script>const app_version = 'v0.4-alpha (03.03.24)';</script>
 <div class="general-container">
     <div class="language-container">
         <div class="RectangleButton2 RectangleButton--dark" onclick="setTranslations('en_GB')">
@@ -91,9 +91,7 @@
                                 <span id="avgMembersValue">&nbsp;</span>
                             </label>
                         </div>
-                        <label class="input-label" for="input-tickets" id="input2label">&nbsp;</label><br>
-                        <input id="input-tickets" placeholder="" type="number"/>
-                        <label class="input-label" for="input-wins" id="input3label">&nbsp;</label><br>
+                        <label class="input-label" for="input-wins" id="input2label">&nbsp;</label><br>
                         <input id="input-wins" placeholder="" type="number"/>
                     </div>
                 </div>
@@ -106,73 +104,75 @@
     </div>
 
     <div id="outputContainer">
-        <div class="card output-1" style="display: none">
+        <div class="card wideCard output-1" style="display: none">
             <div class="card-content">
                 <div class="card-top">
                     <span class="card-title">#1</span>
                     <p>ActiBrawl</p>
                 </div>
                 <div class="card-image">
-                    <b class="output-1-value"></b>
+                    <b class="output-1-value"></b><span class="output-1-valueSeparator"></span><b class="output-1-value2"></b>
                 </div>
                 <div class="card-bottom">
                     <p class="output-1-label"></p>
                 </div>
             </div>
         </div>
-        <div class="card output-2" style="display: none">
-            <div class="card-content">
-                <div class="card-top">
-                    <span class="card-title">#2</span>
-                    <p>ActiBrawl</p>
-                </div>
-                <div class="card-image">
-                    <b class="output-2-value"></b>
-                </div>
-                <div class="card-bottom">
-                    <p class="output-2-label"></p>
-                </div>
-            </div>
-        </div>
-        <div class="card output-3" style="display: none">
-            <div class="card-content">
-                <div class="card-top">
-                    <span class="card-title">#3</span>
-                    <p>ActiBrawl</p>
-                </div>
-                <div class="card-image">
-                    <b class="output-3-value"></b>
-                </div>
-                <div class="card-bottom">
-                    <p class="output-3-label"></p>
+        <div class="cardContainer">
+            <div class="card output-2" style="display: none">
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="card-title">#2</span>
+                        <p>ActiBrawl</p>
+                    </div>
+                    <div class="card-image">
+                        <b class="output-2-value"></b>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="output-2-label"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card output-4" style="display: none">
-            <div class="card-content">
-                <div class="card-top">
-                    <span class="card-title">#4</span>
-                    <p>ActiBrawl</p>
-                </div>
-                <div class="card-image">
-                    <b class="output-4-value"></b>
-                </div>
-                <div class="card-bottom">
-                    <p class="output-4-label"></p>
+            <div class="card output-3" style="display: none">
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="card-title">#3</span>
+                        <p>ActiBrawl</p>
+                    </div>
+                    <div class="card-image">
+                        <b class="output-3-value"></b>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="output-3-label"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card output-5" style="display: none">
-            <div class="card-content">
-                <div class="card-top">
-                    <span class="card-title">#5</span>
-                    <p>ActiBrawl</p>
+            <div class="card output-4" style="display: none">
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="card-title">#4</span>
+                        <p>ActiBrawl</p>
+                    </div>
+                    <div class="card-image">
+                        <b class="output-4-value"></b>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="output-4-label"></p>
+                    </div>
                 </div>
-                <div class="card-image">
-                    <b class="output-5-value"></b>
-                </div>
-                <div class="card-bottom">
-                    <p class="output-5-label"></p>
+            </div>
+            <div class="card output-5" style="display: none">
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="card-title">#5</span>
+                        <p>ActiBrawl</p>
+                    </div>
+                    <div class="card-image">
+                        <b class="output-5-value"></b>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="output-5-label"></p>
+                    </div>
                 </div>
             </div>
         </div>
